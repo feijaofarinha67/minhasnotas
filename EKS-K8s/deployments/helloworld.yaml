@@ -1,0 +1,46 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      # imagePullSecrets:
+      #   - name: ecr-secret
+      containers:
+      - name: app1
+        image: 231629457180.dkr.ecr.us-east-1.amazonaws.com/eksteste:v1.0
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      # imagePullSecrets:
+      #   - name: ecr-secret
+      containers:
+      - name: app2
+        image: nginx:latest
+        ports:
+        - containerPort: 80

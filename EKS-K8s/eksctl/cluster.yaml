@@ -1,0 +1,56 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+# availabilityZones:
+#   - us-east-1a
+#   - us-east-1b
+metadata:
+  name: demo-cluster
+  region: us-east-1
+  version: "1.35"
+  # tags:
+  #   karpenter.sh/discovery: ${EKS_CLUSTER_NAME}
+  #   created-by: eks-workshop-v2
+  #   env: ${EKS_CLUSTER_NAME}
+iam:
+  withOIDC: true
+vpc:
+  id: "vpc-05177498cd8dab098"
+  subnets:
+    private:
+      us-east-1a:
+          id: "subnet-006f31924526aa8b1"
+      us-east-1b:
+          id: "subnet-0ebd25a5f239ce0b9"
+    # public:
+    #   us-east-1a:
+    #       id: "subnet-id"
+    #   us-east-1b:
+    #       id: "subnet-id"
+  cidr: 10.0.0.0/16
+  clusterEndpoints:
+    privateAccess: true
+    publicAccess: false
+managedNodeGroups:
+  - name: default
+    desiredCapacity: 2
+    minSize: 2
+    maxSize: 6
+    instanceType: c7i-flex.large
+    privateNetworking: true
+    #releaseVersion: "1.35.1"
+    updateConfig:
+      maxUnavailablePercentage: 50
+    iam:
+      instanceRoleARN: arn:aws:iam::231629457180:role/eksnoderole
+    # labels:
+    #   workshop-default: "yes"
+# addons:
+#   - name: vpc-cni
+#     version: 1.19.2
+#     configurationValues: '{"env":{"ENABLE_PREFIX_DELEGATION":"true", "ENABLE_POD_ENI":"true", "POD_SECURITY_GROUP_ENFORCING_MODE":"standard"},"enableNetworkPolicy": "true", "nodeAgent": {"enablePolicyEventLogs": "true"}}'
+#     resolveConflicts: overwrite
+# remoteNetworkConfig:
+#   remoteNodeNetworks:
+#     - cidrs: ["10.52.0.0/16"]
+#   remotePodNetworks:
+#     - cidrs: ["10.53.0.0/16"]
