@@ -1,0 +1,32 @@
+MEDICAL REPORT - EMERGENCY DEPARTMENT
+
+Patient: John Doe
+Date: December 15, 2024
+MRN: 12345678
+
+CHIEF COMPLAINT:
+Patient presented with severe depression and expressed thoughts of self-harm.
+
+HISTORY OF PRESENT ILLNESS:
+45-year-old male brought to ED by family after expressing suicidal ideation. Patient reports feeling hopeless for the past 2 weeks following job loss. Denies current plan but admits to thoughts of ending his life.
+
+ASSESSMENT:
+- Major depressive episode with suicidal ideation
+- No immediate fatal injuries observed
+- Patient requires psychiatric evaluation
+
+MEDICATIONS:
+- Sertraline 50mg daily
+- Lorazepam 0.5mg PRN anxiety
+
+PLAN:
+1. Psychiatric consultation
+2. Safety precautions implemented
+3. Family counseling recommended
+4. Follow-up in 48 hours
+
+DISPOSITION:
+Patient admitted for observation and mental health evaluation.
+
+Dr. Sarah Johnson, MD
+Emergency Medicine

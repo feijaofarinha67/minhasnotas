@@ -1,0 +1,49 @@
+MEDICAL REPORT SUMMARY
+
+Patient: Sarah Johnson
+DOB: 03/15/1968
+MRN: 12345678
+Date: 12/08/2024
+Provider: Dr. Michael Chen, MD
+Phone: (555) 123-4567
+Email: mchen@healthcenter.org
+
+CHIEF COMPLAINT:
+Follow-up HTN, DM2, new chest pain
+
+ASSESSMENT:
+Ms. Johnson presents with poorly controlled HTN (148/92) and DM2 (HbA1c 8.2%). New exertional angina concerning for CAD. BMI 31.2 indicates obesity.
+
+CURRENT MEDICATIONS:
+- Lisinopril 10mg daily
+- Metformin 1000mg BID  
+- Atorvastatin 20mg HS
+- Omeprazole 20mg daily
+
+LAB RESULTS:
+- HbA1c: 8.2% (target <7%)
+- LDL: 145 mg/dL (target <100)
+- eGFR: 68 mL/min/1.73m² (mild CKD)
+- BNP: 125 pg/mL (elevated)
+
+PLAN:
+1. Increase Lisinopril to 20mg daily for HTN
+2. Add Jardiance 10mg daily for DM2/CKD
+3. Stress test within 2 weeks for CAD evaluation
+4. F/U in 4 weeks
+
+EMERGENCY CONTACT:
+If chest pain >5 minutes, SOB, or dizziness - call 911 immediately.
+After hours: (555) 999-8888
+Patient portal: sarah.johnson@patientportal.org
+
+WARNING SIGNS:
+- Severe chest pain or pressure
+- Difficulty breathing
+- Sudden weakness or confusion
+- Severe nausea with chest discomfort
+
+Dr. Michael Chen, MD
+Internal Medicine
+Direct: (555) 123-4567
+Fax: (555) 123-4568

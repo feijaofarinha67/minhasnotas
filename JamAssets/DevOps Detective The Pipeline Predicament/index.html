@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS JAM - Cloud Challenge Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>AWS JAM</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#challenges">Challenges</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to AWS JAM</h1>
+                <p>Test your cloud skills with hands-on challenges</p>
+                <button class="cta-button" onclick="showInfo('journey')">Start Your Journey</button>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>15,847</h3>
+                    <p>Active Players</p>
+                </div>
+                <div class="stat-card">
+                    <h3>342</h3>
+                    <p>Challenges</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Success Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="challenges">
+            <div class="container">
+                <h2>Featured Challenges</h2>
+                <div class="challenge-grid">
+                    <div class="challenge-card" onclick="showInfo('ec2')">
+                        <h3>EC2 Mastery</h3>
+                        <p>Deploy and manage EC2 instances with best practices</p>
+                        <span class="difficulty beginner">Beginner</span>
+                        <div class="challenge-stats">
+                            <span>👥 1,234 participants</span>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                    </div>
+                    <div class="challenge-card" onclick="showInfo('serverless')">
+                        <h3>Serverless Solutions</h3>
+                        <p>Build scalable applications using Lambda and API Gateway</p>
+                        <span class="difficulty intermediate">Intermediate</span>
+                        <div class="challenge-stats">
+                            <span>👥 892 participants</span>
+                            <span>⭐ 4.9/5</span>
+                        </div>
+                    </div>
+                    <div class="challenge-card" onclick="showInfo('security')">
+                        <h3>Security Deep Dive</h3>
+                        <p>Implement security best practices across AWS services</p>
+                        <span class="difficulty advanced">Advanced</span>
+                        <div class="challenge-stats">
+                            <span>👥 567 participants</span>
+                            <span>⭐ 4.7/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leaderboard" class="leaderboard">
+            <div class="container">
+                <h2>Analytics Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="chart-container">
+                        <h3>Challenge Completion Rate</h3>
+                        <canvas id="completionChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Skill Distribution</h3>
+                        <canvas id="skillChart"></canvas>
+                    </div>
+                </div>
+                <div class="leaderboard-section">
+                    <h3>Top Performers</h3>
+                    <div class="leaderboard-table">
+                        <div class="leader-row" onclick="showInfo('leader1')">
+                            <span class="rank">1</span>
+                            <span class="name">CloudMaster</span>
+                            <span class="score">2,450 pts</span>
+                            <span class="badge">🏆</span>
+                        </div>
+                        <div class="leader-row" onclick="showInfo('leader2')">
+                            <span class="rank">2</span>
+                            <span class="name">ServerlessGuru</span>
+                            <span class="score">2,380 pts</span>
+                            <span class="badge">🥈</span>
+                        </div>
+                        <div class="leader-row" onclick="showInfo('leader3')">
+                            <span class="rank">3</span>
+                            <span class="name">DevOpsNinja</span>
+                            <span class="score">2,290 pts</span>
+                            <span class="badge">🥉</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About AWS JAM</h2>
+                <p>AWS JAM is a gamified learning platform where you can test and improve your AWS cloud skills through hands-on challenges. Compete with peers, earn points, and become a cloud expert!</p>
+                <div class="feature-grid">
+                    <div class="feature-card" onclick="showInfo('realtime')">
+                        <h4>📊 Real-time Analytics</h4>
+                        <p>Track your progress with detailed insights</p>
+                    </div>
+                    <div class="feature-card" onclick="showInfo('community')">
+                        <h4>👥 Community Driven</h4>
+                        <p>Learn from thousands of cloud professionals</p>
+                    </div>
+                    <div class="feature-card" onclick="showInfo('handson')">
+                        <h4>🛠️ Hands-on Learning</h4>
+                        <p>Practice with real AWS environments</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AWS JAM. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

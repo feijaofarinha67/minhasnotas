@@ -1,0 +1,17 @@
+version: 0.1
+files:
+  - source: index.html
+    destination: /var/www/html/
+  - source: styles.css
+    destination: /var/www/html/
+  - source: script.js
+    destination: /var/www/html/
+scripts:
+  BeforeDeploy:
+    - location: scripts/beforedeploy.sh
+      timeout: 300
+      runas: root
+  AfterDeploy:
+    - location: scripts/afterdeploy.sh
+      timeout: 300
+      runas: root
